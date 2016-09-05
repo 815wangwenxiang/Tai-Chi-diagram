@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#mycanvas{
+				display: block;
+				margin: 50px auto;
+				/*border: 1px solid red;*/
+				-webkit-animation: circle 2s infinite linear;
+				
+			}
+			
+			@-webkit-keyframes circle{
+			0%{ transform:rotate(0deg); }
+			100%{ transform:rotate(360deg); }
+			}
+
+			
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		
+		<canvas id="mycanvas" width="800" height="600"></canvas>
+		
+		<script type="text/javascript">
+			
+			var canvas = document.querySelector("#mycanvas");
+			
+			var context = canvas.getContext("2d");
+			
+//			context.beginPath();			
+//			context.strokeStyle = "green";			
+//			context.arc(400,300,200,0,Math.PI*2,false);				
+//			context.stroke();
+//			context.strokeStyle = "green";
+//			context.beginPath();		
+			context.beginPath();
+			context.arc(400,300,200,Math.PI*0.5,Math.PI*1.5,false);
+			context.fillStyle = "white";			
+			context.stroke();
+			context.fill();
+			
+			context.beginPath();
+			context.arc(400,300,200,Math.PI*1.5,Math.PI/2,false);
+			context.fillStyle = "black";			
+			context.stroke();
+			context.fill();
+			
+			context.beginPath();
+			context.arc(400,200,100,Math.PI*1.5,Math.PI/2,true);	
+			context.fillStyle = "black";
+			context.stroke();
+			context.fill();
+			
+			context.beginPath();
+			context.arc(400,200,10,0,Math.PI*2,false);
+			context.fillStyle = "white";
+			context.stroke();
+			context.fill();
+			
+			context.beginPath();
+			context.fillStyle = "white";
+			context.arc(400,400,100,Math.PI*1.5,Math.PI/2,false);
+			context.fill()
+			context.stroke();
+			
+			context.beginPath();
+			context.arc(400,400,10,0,Math.PI*2,false);
+			context.fillStyle = "black";
+			context.stroke();
+			context.fill()
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
